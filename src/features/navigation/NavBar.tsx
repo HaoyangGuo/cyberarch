@@ -3,7 +3,6 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import SketchfabIcon from "./SketchfabIcon";
 import { useArchStore } from "../../store";
 import { useNavigate, Link, NavLink } from "react-router-dom";
-import agent from "../../agent";
 import axios from "axios";
 
 const NavBar = () => {
@@ -35,33 +34,24 @@ const NavBar = () => {
 		}
 	}, [url]);
 
-	const handleGetSketchfab = async () => {
-		console.log(sketchfabAccessToken);
-		try {
-			const data = await agent.Sketchfab.getMe();
-			console.log(data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
 	return (
 		<Box
 			h={"full"}
 			display={"flex"}
 			flexDir={"column"}
 			alignItems="center"
-			py={12}
+			py={10}
 		>
 			<Text
-				fontSize={"4xl"}
+				fontSize={"3xl"}
 				fontWeight={"bold"}
 				textAlign={"center"}
 				bgGradient="linear(to-r, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195))"
 				bgClip="text"
-				whiteSpace={"pre-line"}
+			
 			>
-				{"Cyber-Arch\nWarehouse"}
-			</Text>
+				{"Cyber-Arch Warehouse"}
+      </Text>
 			<Box mt={4} display="flex" flexDir={"column"} gap={4}>
 				{sketchfabAccessToken === null ? (
 					<Button

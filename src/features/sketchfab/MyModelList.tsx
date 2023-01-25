@@ -25,14 +25,14 @@ const ModelList = () => {
 	if (!models) return <Text>no models</Text>;
 
 	return (
-		<Box overflow={"scroll"}>
+		<Box>
 			<Text fontSize={"2xl"} fontWeight={"semibold"} mb={4}>My Models</Text>
 			<Wrap spacing={"20px"} justify={"center"}>
 				{
 					// @ts-ignore
 					models.map((model) => {
 						return (
-							<WrapItem maxW={"40%"} key={model.uid}>
+							<WrapItem maxW={"25rem"} key={model.uid}>
 								<ModelCard {...model} />
 							</WrapItem>
 						);
@@ -42,7 +42,7 @@ const ModelList = () => {
 					// @ts-ignore
 					models.map((model) => {
 						return (
-							<WrapItem maxW={"40%"} key={model.uid}>
+							<WrapItem maxW={"25rem"} key={model.uid}>
 								<ModelCard {...model} />
 							</WrapItem>
 						);

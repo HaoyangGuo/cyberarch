@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Divider, Text } from "@chakra-ui/react";
 // @ts-ignore
 import MultilineChart from "./MultilineChart.jsx";
 import schc from "./SCHC.json";
@@ -37,17 +37,18 @@ const DataVisualizationPage = () => {
 		<Box
 			w={"full"}
 			h={"full"}
-			pt={12}
-			px={12}
+			pt={10}
+			px={10}
 			display="flex"
 			flexDir={"column"}
 		>
-			<Box w={"full"} display={"flex"} alignItems={"center"}>
-				<Text fontSize={"3xl"} fontWeight={"semibold"} mr={"auto"}>
+			<Box w={"full"} display={"flex"} alignItems={"center"} mb={4}>
+				<Text fontSize={"4xl"} fontWeight={"semibold"} mr={"auto"}>
 					Data Visualization
 				</Text>
-			</Box>
-			<Box mt={8} h="full" overflow={"scroll"}>
+      </Box>
+      <Divider />
+			<Box mt={4} h="full" overflow={"scroll"}>
 				<MultilineChart
 					data={[portfolioData, schcData, vcitData]}
 					dimensions={dimensions}

@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Badge, Box, Button, Divider, Heading, Text } from "@chakra-ui/react";
 import useIsSketchfabAuth from "../../hooks/useIsSketchfabAuth";
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -9,12 +9,12 @@ const SketchfabPage = () => {
 		<Box
 			w={"full"}
 			h={"full"}
-			pt={12}
-			px={12}
+			pt={10}
+			px={10}
 			display="flex"
 			flexDir={"column"}
 		>
-			<Box w={"full"} display={"flex"} alignItems={"center"}>
+			<Box w={"full"} display={"flex"} alignItems={"center"} mb={2}>
 				<Text fontSize={"4xl"} fontWeight={"semibold"} mr={"auto"}>
 					Sketchfab
 				</Text>
@@ -24,8 +24,9 @@ const SketchfabPage = () => {
 				<Button as={NavLink} to="search" size={"lg"}>
 					Search
 				</Button>
-			</Box>
-			<Box mt={4} h="full" overflow={"scroll"}>
+      </Box>
+      <Divider />
+			<Box mt={4} h="full" overflowY={"scroll"}>
 				<Outlet />
 			</Box>
 		</Box>

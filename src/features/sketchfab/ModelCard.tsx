@@ -28,12 +28,13 @@ const ModelCard = ({
 }: ModelCardProps) => {
 	return (
 		<>
-			<Card maxW="">
+			<Card h={"25rem"}>
 				<CardBody>
 					<Image
 						src={thumbnails.images[0].url}
 						alt={name}
-						borderRadius="lg"
+            borderRadius="lg"
+            h={"12rem"}
 					/>
 					<Stack mt="6" spacing="3">
             <Heading size="md">{name}</Heading>

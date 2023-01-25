@@ -30,11 +30,11 @@ function App() {
 
 	return (
 		<div style={{ height: "100vh" }}>
-			<Grid templateColumns="repeat(4, 1fr)">
-				<GridItem w="100%" h="100vh" bg="blackAlpha.400" borderRight={"1px"}>
+			<Grid templateColumns="repeat(3, 1fr)">
+				<GridItem w="100%" colSpan={1} h="100vh" borderRight={"1px"}>
 					<NavBar />
 				</GridItem>
-				<GridItem colSpan={3} h="100vh" bg="blackAlpha.400">
+				<GridItem colSpan={2} h="100vh">
 					<Routes>
 						<Route index element={<HomePage />} />
 						<Route path="sketchfab" element={<SketchfabPage />}>
