@@ -19,12 +19,8 @@ const ModelList = () => {
 			.finally(() => setLoading(false));
 	}, []);
 
-	console.log(models);
-
 	if (loading) return <Loading />;
 	if (!models) return <Text>no models</Text>;
-
-	console.log(models);
 
 	return (
 		<Box mb={"2rem"}>

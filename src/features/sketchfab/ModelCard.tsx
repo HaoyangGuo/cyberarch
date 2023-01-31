@@ -19,8 +19,9 @@ import {
 	ModalOverlay,
 	useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import agent from "../../agent";
 import ue5 from "../../utils/ue5";
 
 interface ModelCardProps {
@@ -36,13 +37,35 @@ const ModelCard = ({
 	uid,
 	isDownloadable,
 }: ModelCardProps) => {
-	console.log(isDownloadable);
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
+	const [loading, setLoading] = useState(false);
 
-	const handleDownload = () => {
+	const handleDownload = async () => {
 		onOpen();
 		ue5("print", { message: "Downloading model..." });
+
+		let response = null;
+		let link = null;
+
+		setLoading(true);
+		agent.Sketchfab.downloadModel(uid)
+			.then((data) => {
+				response = data;
+			})
+			.catch((error) => {
+				console.log(error);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
+
+		if (response) {
+			// @ts-ignore
+			link = response.usdz.url;
+		}
+
+		ue5("download_model", { link: link });
 	};
 
 	return (
@@ -68,6 +91,7 @@ const ModelCard = ({
 								variant="outline"
 								colorScheme={"teal"}
 								onClick={handleDownload}
+								isLoading={loading}
 							>
 								Download
 							</Button>
