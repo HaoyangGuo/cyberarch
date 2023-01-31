@@ -24,6 +24,8 @@ const ModelList = () => {
 	if (loading) return <Loading />;
 	if (!models) return <Text>no models</Text>;
 
+	console.log(models);
+
 	return (
 		<Box mb={"2rem"}>
 			<Text fontSize={"2xl"} fontWeight={"semibold"} mb={4}>My Models</Text>

@@ -36,8 +36,10 @@ const requests = {
 };
 
 const Sketchfab = {
-  getMe: () => requests.get("https://api.sketchfab.com/v3/me"),
-  getMyModels: () => requests.get("https://api.sketchfab.com/v3/me/models"),
+	getMe: () => requests.get("https://api.sketchfab.com/v3/me"),
+	getMyModels: () => requests.get("https://api.sketchfab.com/v3/me/models"),
+	downloadModel: (uid: string) =>
+		requests.get(`https://api.sketchfab.com/v3/models/${uid}/download`),
 };
 
 const agent = {
