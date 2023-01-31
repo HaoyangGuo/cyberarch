@@ -15,7 +15,7 @@ const ModelDetail = () => {
 		if (uid === undefined) return;
 		var client = new Sketchfab(iframeRef.current);
 		client.init(uid, {
-			success: function onSuccess(api) {
+			success: function onSuccess(api: any) {
 				api.start();
 				api.addEventListener("viewerready", function () {
 					console.log("Viewer is ready");
