@@ -1,7 +1,8 @@
 import { Box, Text } from "@chakra-ui/react";
 import { useRef, useEffect } from "react";
 // @ts-ignore
-import * as Sketchfab from "@sketchfab/viewer-api";
+// import * as Sketchfab from "@sketchfab/viewer-api";
+import Sketchfab from "../../utils/Sketchfab";
 import { useArchStore } from "../../store";
 import { NavLink, useParams } from "react-router-dom";
 import { IconButton } from "@chakra-ui/react";
@@ -13,7 +14,9 @@ const ModelDetail = () => {
 
 	useEffect(() => {
 		if (uid === undefined) return;
+		// @ts-ignore
 		var client = new Sketchfab(iframeRef.current);
+		// @ts-ignore		
 		client.init(uid, {
 			success: function onSuccess(api: any) {
 				api.start();
@@ -48,12 +51,11 @@ const ModelDetail = () => {
 					<iframe
 						style={{ width: "100%", height: "100%" }}
 						ref={iframeRef}
-						src=""
 						id="api-frame"
 						allow="autoplay; fullscreen; xr-spatial-tracking"
-						xr-spatial-tracking="true"
 						execution-while-out-of-viewport="true"
 						execution-while-not-rendered="true"
+						xr-spatial-tracking="true"
 						web-share="true"
 						allowFullScreen
 					></iframe>

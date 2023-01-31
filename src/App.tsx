@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem, IconButton } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./features/navigation/NavBar";
 import SketchfabPage from "./features/sketchfab/SketchfabPage";
@@ -8,6 +7,8 @@ import MyModelList from "./features/sketchfab/MyModelList";
 import Search from "./features/sketchfab/Search";
 import DataVisualizationPage from "./features/dataVisualization/DataVisualizationPage";
 import ModelDetail from "./features/sketchfab/ModelDetail";
+import { CloseIcon, SearchIcon } from "@chakra-ui/icons";
+import ue5 from "./utils/ue5";
 
 function App() {
 	// const [count, setCount] = useState(0);
@@ -29,13 +30,27 @@ function App() {
 	//   hello();
 	// };
 
+	const handleClose = () => {
+		ue5("close", { message: "Closing..." });
+	};
+
 	return (
 		<div style={{ height: "100vh" }}>
-			<Grid templateColumns="repeat(3, 1fr)">
-				<GridItem w="100%" colSpan={1} h="100vh" borderRight={"1px"}>
+			<Box
+				borderBottom={"1px"}
+				px={2}
+				h={"8vh"}
+				display={"flex"}
+				alignItems={"center"}
+				justifyContent={"end"}
+			>
+				<IconButton aria-label="Search database" icon={<CloseIcon />} />
+			</Box>
+			<Grid templateColumns="repeat(3, 1fr)" h={"92vh"}>
+				<GridItem w="100%" h={"92vh"} colSpan={1} borderRight={"1px"}>
 					<NavBar />
 				</GridItem>
-				<GridItem colSpan={2} h="100vh">
+				<GridItem colSpan={2} h={"92vh"}>
 					<Routes>
 						<Route index element={<HomePage />} />
 						<Route path="sketchfab" element={<SketchfabPage />}>
