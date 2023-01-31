@@ -7,6 +7,7 @@ import HomePage from "./features/home/HomePage";
 import MyModelList from "./features/sketchfab/MyModelList";
 import Search from "./features/sketchfab/Search";
 import DataVisualizationPage from "./features/dataVisualization/DataVisualizationPage";
+import ModelDetail from "./features/sketchfab/ModelDetail";
 
 function App() {
 	// const [count, setCount] = useState(0);
@@ -40,6 +41,7 @@ function App() {
 						<Route path="sketchfab" element={<SketchfabPage />}>
 							<Route index element={<MyModelList />} />
 							<Route path="search" element={<Search />} />
+							<Route path="model/:uid" element={<ModelDetail />} />
 						</Route>
 						<Route
 							path="data-visualization"

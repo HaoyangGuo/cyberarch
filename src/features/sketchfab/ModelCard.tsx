@@ -12,6 +12,7 @@ import {
 	Image,
 } from "@chakra-ui/react";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 interface ModelCardProps {
 	thumbnails: any;
@@ -46,7 +47,7 @@ const ModelCard = ({
 						<Button variant="outline" colorScheme={"teal"}>
 							Download
 						</Button>
-						<Button variant="ghost">
+						<Button variant="ghost" as={NavLink} to={`model/${uid}`}>
 							View
 						</Button>
 					</ButtonGroup>
