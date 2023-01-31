@@ -37,7 +37,6 @@ const ModelCard = ({
 	uid,
 	isDownloadable,
 }: ModelCardProps) => {
-
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [loading, setLoading] = useState(false);
 
@@ -49,7 +48,7 @@ const ModelCard = ({
 		let link = null;
 
 		setLoading(true);
-		agent.Sketchfab.downloadModel(uid)
+		await agent.Sketchfab.downloadModel(uid)
 			.then((data) => {
 				response = data;
 			})
@@ -59,6 +58,8 @@ const ModelCard = ({
 			.finally(() => {
 				setLoading(false);
 			});
+
+		console.log(response);
 
 		if (response) {
 			// @ts-ignore
