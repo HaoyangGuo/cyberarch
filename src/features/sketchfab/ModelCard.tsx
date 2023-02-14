@@ -66,12 +66,12 @@ const ModelCard = ({
 			link = response.usdz.url;
 		}
 
-		ue5("download_model", { link: link });
+		ue5("download_model", { link: link, name: name });
 	};
 
 	return (
 		<>
-			<Card w={"380px"} minH={"440px"} >
+			<Card w={"380px"} minH={"440px"}>
 				<CardBody>
 					<Image
 						src={thumbnails.images[0].url}
@@ -112,11 +112,7 @@ const ModelCard = ({
 						starting another download.
 					</ModalBody>
 					<ModalFooter>
-						<Button
-							variant={"outline"}
-							mr={3}
-							onClick={onClose}
-						>
+						<Button variant={"outline"} mr={3} onClick={onClose}>
 							Close
 						</Button>
 					</ModalFooter>
