@@ -15,7 +15,7 @@ const SketchfabPage = () => {
 			flexDir={"column"}
 		>
 			<Box w={"full"} display={"flex"} alignItems={"center"} mb={2}>
-				<Text fontSize={"4xl"} fontWeight={"semibold"} mr={"auto"}>
+				<Text fontSize={"3xl"} mr={"auto"}>
 					Sketchfab
 				</Text>
 				<Button as={NavLink} to="" mr={4} size={"lg"}>

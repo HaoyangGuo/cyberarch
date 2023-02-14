@@ -43,12 +43,12 @@ const DataVisualizationPage = () => {
 			flexDir={"column"}
 		>
 			<Box w={"full"} display={"flex"} alignItems={"center"} mb={4}>
-				<Text fontSize={"4xl"} fontWeight={"semibold"} mr={"auto"}>
+				<Text fontSize={"3xl"} mr={"auto"}>
 					Data Visualization
 				</Text>
       </Box>
       <Divider />
-			<Box mt={4} h="full" overflow={"scroll"}>
+			<Box mt={4} h="full" overflowY={"scroll"}>
 				<MultilineChart
 					data={[portfolioData, schcData, vcitData]}
 					dimensions={dimensions}

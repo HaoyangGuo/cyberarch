@@ -36,21 +36,11 @@ function App() {
 
 	return (
 		<div style={{ height: "100vh" }}>
-			<Box
-				borderBottom={"1px"}
-				px={2}
-				h={"8vh"}
-				display={"flex"}
-				alignItems={"center"}
-				justifyContent={"end"}
-			>
-				<IconButton aria-label="Search database" icon={<CloseIcon />} />
-			</Box>
-			<Grid templateColumns="repeat(3, 1fr)" h={"92vh"}>
-				<GridItem w="100%" h={"92vh"} colSpan={1} borderRight={"1px"}>
+			<Grid templateColumns="repeat(3, 1fr)" h={"100vh"}>
+				<GridItem w="100%" h={"100vh"} colSpan={1} borderRight={"1px"}>
 					<NavBar />
 				</GridItem>
-				<GridItem colSpan={2} h={"92vh"}>
+				<GridItem colSpan={2} h={"100vh"}>
 					<Routes>
 						<Route index element={<HomePage />} />
 						<Route path="sketchfab" element={<SketchfabPage />}>

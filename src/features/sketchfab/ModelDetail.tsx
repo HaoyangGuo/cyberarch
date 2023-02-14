@@ -39,15 +39,12 @@ const ModelDetail = () => {
 					as={NavLink}
 					to={"/sketchfab"}
 				/>
-				<Text fontSize={"2xl"} fontWeight={"semibold"} mb={4}>
+				<Text fontSize={"2xl"} mb={4}>
 					Model Detail
 				</Text>
 			</Box>
 			<Box>
-				{/* <Text fontSize={"xl"} fontWeight={"semibold"} mb={4}>
-					Model Detail
-				</Text> */}
-				<Box w={"50vw"} h={"25rem"}>
+				<Box w={"50vw"} h={"400px"}>
 					<iframe
 						style={{ width: "100%", height: "100%" }}
 						ref={iframeRef}

@@ -71,13 +71,13 @@ const ModelCard = ({
 
 	return (
 		<>
-			<Card w={"25rem"} h={"28rem"}>
+			<Card w={"380px"} minH={"440px"} >
 				<CardBody>
 					<Image
 						src={thumbnails.images[0].url}
 						alt={name}
 						borderRadius="lg"
-						maxH={"14rem"}
+						h={"200px"}
 						w={"100%"}
 					/>
 					<Stack mt="6" spacing="3">
@@ -90,7 +90,6 @@ const ModelCard = ({
 						{isDownloadable && (
 							<Button
 								variant="outline"
-								colorScheme={"teal"}
 								onClick={handleDownload}
 								isLoading={loading}
 							>
@@ -114,7 +113,6 @@ const ModelCard = ({
 					</ModalBody>
 					<ModalFooter>
 						<Button
-							colorScheme="teal"
 							variant={"outline"}
 							mr={3}
 							onClick={onClose}

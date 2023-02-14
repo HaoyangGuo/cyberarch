@@ -42,16 +42,9 @@ const NavBar = () => {
 			alignItems="center"
 			py={10}
 		>
-			<Text
-				fontSize={"3xl"}
-				fontWeight={"bold"}
-				textAlign={"center"}
-				bgGradient="linear(to-r, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195))"
-				bgClip="text"
-			
-			>
-				{"Cyber-Arch Warehouse"}
-      </Text>
+			<Text fontSize={"3xl"} textAlign={"center"}>
+				CyberArchWarehouse
+			</Text>
 			<Box mt={4} display="flex" flexDir={"column"} gap={4}>
 				{sketchfabAccessToken === null ? (
 					<Button
@@ -72,11 +65,7 @@ const NavBar = () => {
 						Sketchfab
 					</Button>
 				)}
-				<Button
-					size="lg"
-					as={NavLink}
-          to="data-visualization"
-				>
+				<Button size="lg" as={NavLink} to="data-visualization">
 					Data Visualization
 				</Button>
 			</Box>
