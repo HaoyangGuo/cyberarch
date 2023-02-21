@@ -71,7 +71,7 @@ const ModelCard = ({
 
 	return (
 		<>
-			<Card w={"380px"} minH={"440px"}>
+			<Card w={"full"} minH={"440px"}>
 				<CardBody>
 					<Image
 						src={thumbnails.images[0].url}

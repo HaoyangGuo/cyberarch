@@ -30,7 +30,7 @@ const RemoteModelList = () => {
 					// @ts-ignore
 					models.map((model) => {
 						return (
-							<WrapItem w={"380px"} key={model.uid}>
+							<WrapItem w={"40%"} key={model.uid}>
 								<ModelCard {...model} />
 							</WrapItem>
 						);
