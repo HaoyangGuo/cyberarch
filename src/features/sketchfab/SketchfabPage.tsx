@@ -9,7 +9,7 @@ const SketchfabPage = () => {
 		<Box
 			w={"full"}
 			h={"full"}
-			pt={10}
+			pt={8}
 			px={10}
 			display="flex"
 			flexDir={"column"}
@@ -19,11 +19,14 @@ const SketchfabPage = () => {
 					Sketchfab
 				</Text>
 				<Button as={NavLink} to="" mr={4} size={"lg"}>
-					My Models
+					Remote Models
 				</Button>
-				<Button as={NavLink} to="search" size={"lg"}>
+				<Button as={NavLink} to="local-models" mr={4} size={"lg"}>
+					Local Models
+				</Button>
+				{/* <Button as={NavLink} to="search" size={"lg"}>
 					Search
-				</Button>
+				</Button> */}
       </Box>
       <Divider />
 			<Box mt={4} h="full" overflowY={"scroll"}>

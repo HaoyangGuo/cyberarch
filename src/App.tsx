@@ -3,12 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./features/navigation/NavBar";
 import SketchfabPage from "./features/sketchfab/SketchfabPage";
 import HomePage from "./features/home/HomePage";
-import MyModelList from "./features/sketchfab/MyModelList";
+import RemoteModelList from "./features/sketchfab/RemoteModelList";
 import Search from "./features/sketchfab/Search";
 import DataVisualizationPage from "./features/dataVisualization/DataVisualizationPage";
 import ModelDetail from "./features/sketchfab/ModelDetail";
-import { CloseIcon, SearchIcon } from "@chakra-ui/icons";
 import ue5 from "./utils/ue5";
+import LocalModelList from "./features/sketchfab/LocalModelList";
 
 function App() {
 	// const [count, setCount] = useState(0);
@@ -36,15 +36,16 @@ function App() {
 
 	return (
 		<div style={{ height: "100vh" }}>
-			<Grid templateColumns="repeat(3, 1fr)" h={"100vh"}>
-				<GridItem w="100%" h={"100vh"} colSpan={1} borderRight={"1px"}>
+			<Box display={"flex"} h={"100vh"}>
+				<Box h={"100vh"} borderRight={"1px"}>
 					<NavBar />
-				</GridItem>
-				<GridItem colSpan={2} h={"100vh"}>
+				</Box>
+				<Box w={"100%"} h={"100vh"}>
 					<Routes>
 						<Route index element={<HomePage />} />
 						<Route path="sketchfab" element={<SketchfabPage />}>
-							<Route index element={<MyModelList />} />
+							<Route index element={<RemoteModelList />} />
+							<Route path="local-models" element={<LocalModelList />} />
 							<Route path="search" element={<Search />} />
 							<Route path="model/:uid" element={<ModelDetail />} />
 						</Route>
@@ -53,8 +54,8 @@ function App() {
 							element={<DataVisualizationPage />}
 						></Route>
 					</Routes>
-				</GridItem>
-			</Grid>
+				</Box>
+			</Box>
 		</div>
 	);
 }

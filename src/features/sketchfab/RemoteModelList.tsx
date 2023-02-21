@@ -5,7 +5,7 @@ import agent from "../../agent";
 import Loading from "../loading/Loading";
 import ModelCard from "./ModelCard";
 
-const ModelList = () => {
+const RemoteModelList = () => {
 
 	const [loading, setLoading] = useState(true);
 	const [models, setModels] = useState();
@@ -24,7 +24,7 @@ const ModelList = () => {
 
 	return (
 		<Box mb={"32px"}>
-			<Text fontSize={"2xl"} mb={4}>My Models</Text>
+			<Text fontSize={"2xl"} mb={4}>Remote Models</Text>
 			<Wrap spacing={"20px"} justify={"start"}>
 				{
 					// @ts-ignore
@@ -41,4 +41,4 @@ const ModelList = () => {
 	);
 };
 
-export default ModelList;
+export default RemoteModelList;

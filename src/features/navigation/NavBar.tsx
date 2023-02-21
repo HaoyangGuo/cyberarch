@@ -40,7 +40,8 @@ const NavBar = () => {
 			display={"flex"}
 			flexDir={"column"}
 			alignItems="center"
-			py={10}
+			py={8}
+			px={10}
 		>
 			<Text fontSize={"3xl"} textAlign={"center"}>
 				CyberArchWarehouse

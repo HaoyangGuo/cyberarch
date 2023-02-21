@@ -37,7 +37,7 @@ const DataVisualizationPage = () => {
 		<Box
 			w={"full"}
 			h={"full"}
-			pt={10}
+			pt={8}
 			px={10}
 			display="flex"
 			flexDir={"column"}
