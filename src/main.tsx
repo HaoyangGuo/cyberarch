@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ColorModeScript initialColorMode={theme.config.initialColorMode} />
     <ChakraProvider theme={theme} cssVarsRoot="html">
-      <BrowserRouter>
+      <BrowserRouter basename="/ui">
         <App />
       </BrowserRouter>
     </ChakraProvider>

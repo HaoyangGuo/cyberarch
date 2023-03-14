@@ -42,17 +42,17 @@ function App() {
 				</Box>
 				<Box w={"100%"} h={"100vh"}>
 					<Routes>
-						<Route index element={<HomePage />} />
-						<Route path="sketchfab" element={<SketchfabPage />}>
-							<Route index element={<RemoteModelList />} />
-							<Route path="local-models" element={<LocalModelList />} />
-							<Route path="search" element={<Search />} />
-							<Route path="model/:uid" element={<ModelDetail />} />
-						</Route>
-						<Route
-							path="data-visualization"
-							element={<DataVisualizationPage />}
-						></Route>
+							<Route index element={<HomePage />} />
+							<Route path="sketchfab" element={<SketchfabPage />}>
+								<Route index element={<RemoteModelList />} />
+								<Route path="local-models" element={<LocalModelList />} />
+								<Route path="search" element={<Search />} />
+								<Route path="model/:uid" element={<ModelDetail />} />
+							</Route>
+							<Route
+								path="data-visualization"
+								element={<DataVisualizationPage />}
+							></Route>
 					</Routes>
 				</Box>
 			</Box>
