@@ -36,7 +36,6 @@ function App() {
 
 	return (
 		<div style={{ height: "100vh" }}>
-			<div>hello</div>
 			<Box display={"flex"} h={"100vh"}>
 				<Box h={"100vh"} borderRight={"1px"}>
 					<NavBar />
